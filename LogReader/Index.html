@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="\Content\bootstrap.min.css" rel="stylesheet">
+    <script src="\Script\angular.min.js" language="javascript"></script>
+    <script src="\Client\LogReader.js" language="javascript"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Log Reader</h1>
+        </div>
+
+
+        <div data-ng-app="LogReader" data-ng-controller="LogController">
+            <div class="row" data-ng-repeat="log in ViewModel.LogData">
+                <div class="col-md-2" data-ng-bind="log.FirstName"></div>
+                <div class="col-md-2" data-ng-bind="log.LastName"></div>
+                <div class="col-md-2" data-ng-bind="log.EmpNo"></div>
+                <div class="col-md-2" data-ng-bind="log.Desig"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
